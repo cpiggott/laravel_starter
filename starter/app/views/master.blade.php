@@ -14,11 +14,11 @@
         {{ HTML::style('css/bootstrap-theme.css') }}
 
         <style>
-        @section('styles')
-            body {
-                padding-top: 60px;
-            }
-        @show
+            @section('styles')
+                body {
+                    padding-top: 60px;
+                }
+            @show
         </style>
        
         
@@ -44,6 +44,7 @@
                         <li><a href="{{{ URL::to('') }}}">Home</a></li>
                         @if ( Auth::guest() )
                             <li>{{ HTML::link('signin', 'Sign In') }}</li>
+                            <li>{{ HTML::link('create', 'Create Account') }}</li>
                         @else
                             <li>{{ HTML::link('signout', 'Sign Out') }}</li>
                         @endif

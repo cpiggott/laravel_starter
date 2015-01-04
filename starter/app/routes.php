@@ -28,21 +28,21 @@ Route::get('/signout', array(
 
 Route::group(array('before'=> 'guest'), function(){
 
-	// Route::group(array('before' => 'csrf'), function(){
+	Route::group(array('before' => 'csrf'), function(){
 
-	// 	Route::post('account/create', array(
-	// 		'as' => 'account-create-post',
-	// 		'uses' => 'UserController@postCreate'
-	// 		)
-	// 	);
+		Route::post('create', array(
+			'as' => 'account-create-post',
+			'uses' => 'UserController@postCreate'
+			)
+		);
 
-	// });
+	});
 
-	// Route::get('account/create', array(
-	// 	'as' => 'account-create',
-	// 	'uses' => 'UserController@getCreate'
-	// 	)
-	// );
+	Route::get('create', array(
+		'as' => 'account-create',
+		'uses' => 'UserController@getCreate'
+		)
+	);
 
 
 	Route::get('/signin', array(
