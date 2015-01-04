@@ -24,18 +24,33 @@ class UserController extends BaseController {
         $email = Input::get('email');
 		$password = Input::get('password');
 
-        // Try to log the user in.
-        if (Auth::attempt(array('email'=> $email, 'password'=> $password)))
-        {
-            // Redirect to homepage
-            return Redirect::to('')->with('success', 'You have logged in successfully');
-        }
-        else
-        {
-            // Redirect to the login page.
-            return Redirect::to('signin')->withErrors(array('password' => 'Password invalid'))->withInput(Input::except('password'));
-        }
-        
+		$validator = Validator::make(
+			array(
+				'email' => $email,
+				'password' => $password
+			), 
+			array(
+				'email' => 'required|email',
+				'password' => 'required|min:8'
+			)
+		);
+
+		//Validate that the inputs are correct
+		if($validator->passes()){
+
+	        // Try to log the user in.
+	        if (Auth::attempt(array('email'=> $email, 'password'=> $password)))
+	        {
+	            // Redirect to homepage
+	            return Redirect::to('')->with('success', 'You have logged in successfully');
+	        }
+	        else
+	        {
+	            // Redirect to the login page.
+	            return Redirect::to('signin')->withErrors(array('password' => 'Password invalid'))->withInput(Input::except('password'));
+	        }
+	    }
+	        
 
         // Something went wrong.
         return Redirect::to('signin')->withErrors($validator)->withInput(Input::except('password'));

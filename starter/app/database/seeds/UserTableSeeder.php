@@ -16,13 +16,12 @@ class UserTableSeeder extends Seeder {
         $user->password = Hash::make('password');
         $user->save();
 
-        // alternativ to eloquent we can also use direct database-methods
-        /*
+        
         User::create(array(
-            'username'  => 'admin',
-            'password'  => Hash::make('password'),
-            'email'     => 'admin@localhost'
+            'username'  => 'Chris Piggott',
+            'password'  => Hash::make('12345678'),
+            'email'     => 'nullrefexc@gmail.com'
         ));
-        */
+        
     }
 }

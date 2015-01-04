@@ -7,6 +7,13 @@
 
 {{-- Content --}}
 @section('content')
+    @if ($errors->has())
+        <div id="errors" class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                {{ $error }}<br>        
+            @endforeach
+        </div>
+        @endif
 <div class="page-header">
     <h2>Sign In to your account</h2>
 </div>

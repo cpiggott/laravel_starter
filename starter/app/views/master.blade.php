@@ -20,6 +20,8 @@
             }
         @show
         </style>
+       
+        
     </head>
 
     <body>
@@ -55,7 +57,7 @@
         <!-- Container -->
         <div class="container">
             @if ($message = Session::get('success'))
-                <div class="alert alert-success alert-block">
+                <div id="successMessage" class="alert alert-success alert-block">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                     <h4>Success</h4>
                     {{{ $message }}}
@@ -68,7 +70,7 @@
         </div>
 
         <!-- Scripts are placed here -->
-        {{ HTML::script('js/jquery-1.11.1.min.js') }}
+        {{ HTML::script('js/jquery-1.11.2.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
 
     </body>
