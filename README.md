@@ -15,7 +15,9 @@ http://laravel-recipes.com/recipes/283/generating-a-new-application-key
 
 Create the migration table
 
+
 php artisan migrate:install
+
 php artisan migrate:make create_users_table --create=users
 
 <?php
