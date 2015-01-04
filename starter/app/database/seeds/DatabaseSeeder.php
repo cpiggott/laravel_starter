@@ -11,7 +11,9 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
-		// $this->call('UserTableSeeder');
+		//Comment out this line to seed the database with fake users
+		//If commented out, use 'php artisan db:seed'
+		//$this->call('UserTableSeeder');
 	}
 
 }

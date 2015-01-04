@@ -3,7 +3,7 @@
     <head>
         <title>
             @section('title')
-            Laravel 4 - Tutorial
+            Laravel 4 - Starter
             @show
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,14 +34,19 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="#">Laravel</a>
+                    <a class="navbar-brand" href="">Laravel Starter</a>
                 </div>
                 <!-- Everything you want hidden at 940px or less, place within here -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="{{{ URL::to('') }}}">Home</a></li>
                     </ul> 
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="">Sign In</a></li>
+                    </ul>
                 </div>
+
+                
             </div>
         </div> 
 
