@@ -38,12 +38,14 @@
                 </div>
                 <!-- Everything you want hidden at 940px or less, place within here -->
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
+                   <ul class="nav navbar-nav">
                         <li><a href="{{{ URL::to('') }}}">Home</a></li>
+                        @if ( Auth::guest() )
+                            <li>{{ HTML::link('signin', 'Sign In') }}</li>
+                        @else
+                            <li>{{ HTML::link('signout', 'Sign Out') }}</li>
+                        @endif
                     </ul> 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="">Sign In</a></li>
-                    </ul>
                 </div>
 
                 
@@ -52,6 +54,13 @@
 
         <!-- Container -->
         <div class="container">
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <h4>Success</h4>
+                    {{{ $message }}}
+                </div>
+            @endif
 
             <!-- Content -->
             @yield('content')
