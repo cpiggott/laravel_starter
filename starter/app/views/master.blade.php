@@ -3,7 +3,7 @@
     <head>
         <title>
             @section('title')
-            Laravel 4 - Starter
+            Laravel 4.2 - Starter
             @show
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

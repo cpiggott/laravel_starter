@@ -2,7 +2,7 @@
 
 @section('title')
 @parent
-:: Login
+:: Create Account
 @stop
 
 {{-- Content --}}
