@@ -20,8 +20,8 @@
                 }
             @show
         </style>
-       
-        
+
+
     </head>
 
     <body>
@@ -48,12 +48,12 @@
                         @else
                             <li>{{ HTML::link('signout', 'Sign Out') }}</li>
                         @endif
-                    </ul> 
+                    </ul>
                 </div>
 
-                
+
             </div>
-        </div> 
+        </div>
 
         <!-- Container -->
         <div class="container">
