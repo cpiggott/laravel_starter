@@ -19,9 +19,11 @@ After you have installed both Laravel and Composer, you will now want to clone t
 
 `git clone https://github.com/cpiggott/laravel_start.git`
 
-Navigate into the `laravel_starter/starter` directory/folder and run the following command:
+Navigate into the `laravel_starter/starter` directory/folder and run the following commands:
 
-`$ php artisan key:generate` - This step is important!!! This resets the project key so that you can deploy.
+`composer install`
+
+`php artisan key:generate` - This step is important!!! This resets the project key so that you can deploy.
 
 At this point I would recommend opening the entire project in your favorite editor, Sublime Text has an open folder option that works fell for projects like this, using their open folder option at the root of the project. http://www.sublimetext.com/
 
